@@ -1,0 +1,88 @@
+nav {
+    margin-bottom: 20px; /* Añade espacio en la parte inferior del nav */
+}
+
+/* Centrar el contenido dentro del nav */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Estilos para centrar el video y ajustar la proporción vertical (4:5) */
+.video-container {
+    width: 20%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor del video */
+    position: relative;
+    padding-top: 35%; /* Relación de aspecto 4:5 (altura más grande que el ancho pero no tan extrema) */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+    height: 100%; /* El iframe ocupa toda la altura del contenedor */
+    margin-bottom: 10px;
+}
+
+/* Estilos para ajustar el espacio entre el video y p*/
+section {
+    margin-bottom: 20px; /* Espacio entre secciones */
+}
+
+/* Estilos para mejorar la legibilidad del párrafo */
+section p {
+    margin-top: 10px; /* Reduce el espacio superior para acercar el párrafo al video */
+    font-size: 2em; /* Aumenta ligeramente el tamaño de la fuente */
+    line-height: 1.6; /* Mejora la separación entre líneas para mayor legibilidad */
+    color: #333; /* Color de texto ligeramente más oscuro para mejor contraste */
+    max-width: 800px; /* Limita el ancho del párrafo para evitar líneas demasiado largas */
+    margin: 10px auto; /* Centra el texto y ajusta el margen para más espacio */
+    text-align: justify; /* Justifica el texto para un aspecto más ordenado */
+}
+
+/* Estilo del enlace para hacerlo más visible */
+section p a {
+    color: #007acc; /* Color azul para destacar el enlace */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    font-weight: bold; /* Hace que el enlace sea más prominente */
+}
+
+/* Añadir un subrayado al pasar el cursor sobre el enlace */
+section p a:hover {
+    text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+}
+
+.centrado {
+    text-align: center;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center; /* Alinea verticalmente los elementos en el centro */
+    justify-content: space-between; /* Coloca las imágenes a los lados y el centro en el medio */
+}
+
+#IG {
+    display: inline-block;
+}
+
+#creditos {
+    text-align: right;
+}
+
