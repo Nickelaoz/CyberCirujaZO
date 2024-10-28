@@ -1,23 +1,24 @@
+@font-face {
+    font-family: 'RetroLandMayhem';
+    src: url('fonts/retro-land-mayhem.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     text-decoration: none;
 }
 header section {
     margin-bottom: 0;
 }
+
 header p {
     margin-top: 0;
     font-size: 3.5em;
 }
 
 nav {
-    margin-bottom: 20px; /* Añade espacio en la parte inferior del nav */
-}
-
-@font-face {
-    font-family: 'RetroLandMayhem';
-    src: url('fonts/retro-land-mayhem.ttf') format('truetype'); /* Ruta relativa a tu archivo */
-    font-weight: normal; /* Opcional: puedes definir pesos específicos */
-    font-style: normal;  /* Opcional: también puedes definir estilo (normal, italic, etc.) */
+    margin-bottom: 20px;
 }
 
 nav ul { /* Centrar el contenido dentro del nav */
@@ -29,6 +30,7 @@ nav ul { /* Centrar el contenido dentro del nav */
 
 nav ul li {
     display: inline-block;
+    margin-top: 10px;
     margin-right: 10px;
 }
 
@@ -44,7 +46,7 @@ h2 {
     font-family: 'RetroLandMayhem';
     font-size: 4em;
     text-align: center;
-    margin-top: 10 px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 
@@ -70,7 +72,7 @@ section {
 }
 
 /* Estilos para mejorar la legibilidad del párrafo */
-section p {
+main section p {
     margin-top: 10px; /* Reduce el espacio superior para acercar el párrafo al video */
     font-size: 2em; /* Aumenta ligeramente el tamaño de la fuente */
     line-height: 1.6; /* Mejora la separación entre líneas para mayor legibilidad */
