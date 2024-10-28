@@ -1,17 +1,26 @@
+* {
+    text-decoration: none;
+}
+header section {
+    margin-bottom: 0;
+}
+header p {
+    margin-top: 0;
+    font-size: 3.5em;
+}
+
 nav {
     margin-bottom: 20px; /* Añade espacio en la parte inferior del nav */
 }
 
 @font-face {
-    font-family: 'RetroLandMayhem'; /* Nombre personalizado */
+    font-family: 'RetroLandMayhem';
     src: url('fonts/retro-land-mayhem.ttf') format('truetype'); /* Ruta relativa a tu archivo */
     font-weight: normal; /* Opcional: puedes definir pesos específicos */
     font-style: normal;  /* Opcional: también puedes definir estilo (normal, italic, etc.) */
 }
 
-
-/* Centrar el contenido dentro del nav */
-nav ul {
+nav ul { /* Centrar el contenido dentro del nav */
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -23,11 +32,17 @@ nav ul li {
     margin-right: 10px;
 }
 
+nav ul li:hover {
+    text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+}
+
 nav ul li:last-child {
     margin-right: 0;
 }
 
 h2 {
+    font-family: 'RetroLandMayhem';
+    font-size: 4em;
     text-align: center;
     margin-top: 10 px;
     margin-bottom: 30px;
@@ -50,7 +65,6 @@ h2 {
     margin-bottom: 10px;
 }
 
-/* Estilos para ajustar el espacio entre el video y p*/
 section {
     margin-bottom: 20px; /* Espacio entre secciones */
 }
@@ -61,7 +75,7 @@ section p {
     font-size: 2em; /* Aumenta ligeramente el tamaño de la fuente */
     line-height: 1.6; /* Mejora la separación entre líneas para mayor legibilidad */
     color: #333; /* Color de texto ligeramente más oscuro para mejor contraste */
-    max-width: 800px; /* Limita el ancho del párrafo para evitar líneas demasiado largas */
+    max-width: 1200px; /* Limita el ancho del párrafo para evitar líneas demasiado largas */
     margin: 10px auto; /* Centra el texto y ajusta el margen para más espacio */
     text-align: justify; /* Justifica el texto para un aspecto más ordenado */
 }
@@ -88,14 +102,9 @@ section p a:hover {
     justify-content: space-between; /* Coloca las imágenes a los lados y el centro en el medio */
 }
 
-header h2 {
-    font-family: 'RetroLandMayhem';
-    font-size: 4em;
-}
-
 .menú {
     font-family: 'RetroLandMayhem';
-    font-size: 2.5em;
+    font-size: 1.9em;
 }
 
 .menú li {
@@ -111,11 +120,40 @@ header h2 {
     color: #040404;
 }
 
+.retro {
+    font-family: 'RetroLandMayhem';
+}
+
 #IG {
     display: inline-block;
 }
 
 #creditos {
     text-align: right;
+}
+
+#pestañaActual {
+    background-color: rgb(195, 195, 195);
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .video-container {
+        width: 100%; /* Ajusta el ancho a 100% en dispositivos móviles */
+        padding-top: 56.25%; /* Aspect ratio 16:9 */
+    }
+
+    header h2 {
+        font-size: 2em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .menú {
+        font-size: 1.5em; /* Disminuye el tamaño de la fuente en dispositivos móviles */
+    }
 }
 
