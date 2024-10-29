@@ -50,6 +50,15 @@ h2 {
     margin-bottom: 30px;
 }
 
+h3 {
+    font-family: "RetroLandMayhem";
+    font-size: 2em;
+}
+
+form {
+    width: 50vw;
+}
+
 /* Estilos para centrar el video y ajustar la proporción vertical (4:5) */
 .video-container {
     width: 20%; /* Ajusta el ancho del contenedor */
@@ -92,6 +101,10 @@ section p a {
 /* Añadir un subrayado al pasar el cursor sobre el enlace */
 section p a:hover {
     text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+}
+
+footer {
+    margin-top: 30px;
 }
 
 .centrado {
