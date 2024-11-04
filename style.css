@@ -8,6 +8,15 @@
 * {
     text-decoration: none;
 }
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* Espacio entre las imágenes */
+    padding: 1rem;
+}
+
 header section {
     margin-bottom: 0;
 }
@@ -18,7 +27,7 @@ header p {
 }
 
 nav {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
 
 nav ul { /* Centrar el contenido dentro del nav */
@@ -59,25 +68,8 @@ form {
     width: 50vw;
 }
 
-/* Estilos para centrar el video y ajustar la proporción vertical (4:5) */
-.video-container {
-    width: 20%; /* Ajusta el ancho del contenedor */
-    margin: 0 auto; /* Centra el contenedor del video */
-    position: relative;
-    padding-top: 35%; /* Relación de aspecto 4:5 (altura más grande que el ancho pero no tan extrema) */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
-    height: 100%; /* El iframe ocupa toda la altura del contenedor */
-    margin-bottom: 10px;
-}
-
 section {
-    margin-bottom: 20px; /* Espacio entre secciones */
+    margin-bottom: 50px; /* Espacio entre secciones */
 }
 
 /* Estilos para mejorar la legibilidad del párrafo */
@@ -113,8 +105,42 @@ footer {
 
 .encabezado {
     display: flex;
-    align-items: center; /* Alinea verticalmente los elementos en el centro */
-    justify-content: space-between; /* Coloca las imágenes a los lados y el centro en el medio */
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Contenedor para la imagen central y el texto para que compartan el mismo ancho */
+.encabezado div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%; /* Ocupa el 50% del espacio disponible */
+    text-align: center;
+}
+
+/* Imagen central con ancho responsivo y máximo de 100% del contenedor */
+.img-central {
+    width: 100%; /* Ocupa el ancho completo del contenedor div */
+    max-width: 600px; /* Tamaño máximo para pantallas grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    text-align: center;
+}
+
+.img-lateral {
+    width: auto; /* Ancho automático para mantener proporciones */
+    max-width: 300px; /* Tamaño máximo para las imágenes laterales */
+    height: auto; /* Mantiene la proporción de la imagen */
+    flex-grow: 1; /* Permite que la imagen lateral crezca y ocupe el espacio disponible */
+    margin: 0; /* Elimina márgenes para un mejor centrado */
+}
+
+/* Texto con ancho igual al de la imagen central */
+.encabezado p {
+    font-size: 3.5em;
+    width: 100%; /* Ocupa el mismo ancho que la imagen central */
+    max-width: 600px; /* Tamaño máximo igual al de la imagen central */
+    margin-top: 0;
 }
 
 .menú {
@@ -139,6 +165,23 @@ footer {
     font-family: 'RetroLandMayhem';
 }
 
+/* Estilos para centrar el video y ajustar la proporción vertical (4:5) */
+.video-container {
+    width: 20%; /* Ajusta el ancho del contenedor */
+    margin: 0 auto; /* Centra el contenedor del video */
+    position: relative;
+    padding-top: 35%; /* Relación de aspecto 4:5 (altura más grande que el ancho pero no tan extrema) */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+    height: 100%; /* El iframe ocupa toda la altura del contenedor */
+    margin-bottom: 10px;
+}
+
 #IG {
     display: inline-block;
 }
@@ -158,17 +201,32 @@ footer {
         margin-bottom: 10px;
     }
 
-    .video-container {
-        width: 100%; /* Ajusta el ancho a 100% en dispositivos móviles */
-        padding-top: 56.25%; /* Aspect ratio 16:9 */
-    }
-
     header h2 {
         font-size: 2em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+    }
+
+    .img-central, .encabezado p {
+        max-width: 100%; /* Asegura que ambos elementos se ajusten a pantallas pequeñas */
+    }
+
+    .img-lateral {
+        width: 8%;
+        max-width: 60px;
     }
 
     .menú {
         font-size: 1.5em; /* Disminuye el tamaño de la fuente en dispositivos móviles */
     }
-}
 
+        /* En pantallas más pequeñas, reduce el tamaño de las imágenes laterales */
+    .encabezado img {
+        width: 10%;
+        max-width: 60px;
+    }
+
+    .video-container {
+        width: 100%; /* Ajusta el ancho a 100% en dispositivos móviles */
+        padding-top: 56.25%; /* Aspect ratio 16:9 */
+    }
+
+}
