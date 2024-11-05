@@ -64,8 +64,19 @@ h3 {
     font-size: 2em;
 }
 
+p {
+    margin-bottom: 50px;
+}
+
 form {
+    font-size: 1.3em;
     width: 50vw;
+}
+
+label, input, textarea, button {
+    display: block;
+    width: 100%; /* Hace que los elementos usen todo el ancho del formulario */
+    margin-bottom: 10px;
 }
 
 section {
@@ -75,12 +86,12 @@ section {
 /* Estilos para mejorar la legibilidad del párrafo */
 main section p {
     margin-top: 10px; /* Reduce el espacio superior para acercar el párrafo al video */
-    font-size: 2em; /* Aumenta ligeramente el tamaño de la fuente */
+    font-size: 2em; 
     line-height: 1.6; /* Mejora la separación entre líneas para mayor legibilidad */
-    color: #333; /* Color de texto ligeramente más oscuro para mejor contraste */
+    color: #333; 
     max-width: 1200px; /* Limita el ancho del párrafo para evitar líneas demasiado largas */
     margin: 10px auto; /* Centra el texto y ajusta el margen para más espacio */
-    text-align: justify; /* Justifica el texto para un aspecto más ordenado */
+    text-align: justify; 
 }
 
 /* Estilo del enlace para hacerlo más visible */
@@ -93,6 +104,19 @@ section p a {
 /* Añadir un subrayado al pasar el cursor sobre el enlace */
 section p a:hover {
     text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+}
+
+form {
+    max-width: 1200px; 
+    margin: 10px auto; 
+    text-align: justify;
+}
+
+button {
+    width: auto; /* Deja que los botones se ajusten automáticamente a su contenido */
+    margin-right: 10px; /* Espacio entre botones */
+    padding: 10px 20px;
+    cursor: pointer; /* Cambia el cursor para indicar interactividad */
 }
 
 footer {
@@ -182,8 +206,9 @@ footer {
     margin-bottom: 10px;
 }
 
-#IG {
-    display: inline-block;
+#IG{
+    width: 80%;
+    text-align: center;
 }
 
 #creditos {

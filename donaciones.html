@@ -20,19 +20,23 @@
     <nav>
         <ul class="menú">
             <li><a href="index.html">HOME</a></li>
-            <li id="pestañaActual">DONACIONES/<br>PEDIDOS</li>
-            <li>DÓNDE<br>ENCONTRARNOS</li>
+            <li id="pestañaActual"><a href="donaciones.html">DONÁ/<br>SOLICITÁ COMPU</a></li>
+            <li><a href="dondeEncontrarnos.html">DÓNDE<br>ENCONTRARNOS</a></li>
+            <li><a href="https://rebelion.digital/2021/03/05/manifiesto-cyberciruja/" target="_blank" rel="noopener noreferrer">MANIFIESTO<br>CYBERCIRUJA</a></li>
             <li>EVENTOS</li>
             <li>CIRUJA<br>CREATIVO</li>
             <li><a href="https://tube.undernet.uy/c/cybercirujas/videos" target="_blank"
                     rel="noopener noreferrer">VIDEOS</a></li>
-            <li>BLOG</li>
-            <li>FORO</li>
-            <li>PREGUNTAS<br>FRECUENTES</li>
+            <li><a href="https://blog.cybercirujas.club/" target="_blank" rel="noopener noreferrer">BLOG</a></li>
+            <li><a href="https://cybercirujas.rebelion.digital/foro/" target="_blank" rel="noopener noreferrer">FORO</a></li>
+            <li >PREGUNTAS<br>FRECUENTES</li>
         </ul>
     </nav>
 
     <main>
+        <section>
+            <p>Reparamos y recirculamos computadoras y las donamos a quienes las necesitan.</p>
+        </section>
         <section>
             <h3>DONACIONES</h3>     
             <article>
@@ -46,10 +50,10 @@
             <form action="https://airform.io/cybercirujas.zo@protonmail.com" method="post">
                 <fieldset>
                     <label for="Donante">Persona o Institución Donante.  <i>*obligatorio</i> </label>
-                <input type="text" name="Donante" size="40" placeholder="Ingresá tu Nombre y Apellido o el de la Institución.">
+                <input type="text" name="Donante" size="40" required placeholder="Ingresá tu Nombre o el de la Institución.">
                 <br>
-                <label for="Apellido">Apellido <i>*obligatorio</i></label>
-                <input type="text" name="Apellido" id="Apellido" required placeholder="Ingresá tu Apellido">
+                <label for="Apellido">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Ingresá tu Apellido">
                 <br>
                 <label for="Teléfono">Teléfono <i>*obligatorio</i></label>
                 <input type="number" name="Teléfono" id="Teléfono" required placeholder="Ingresá solo números">
@@ -59,34 +63,59 @@
                 <br>
                 <textarea name="Mensaje" id="Mensaje" cols="80" rows="6" spellcheck="true" placeholder="Contanos qué tenés para donar..."></textarea>
                 <br>
-                <button type="submit" value="Enviar">
-                <button type="reset" value="Borrar">
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
                 </fieldset>
             </form>
         </section>
 
         <section>
-            <h3>PEDIDOS</h3>
-            <article>
-
-            </article>
+            <h3>PEDIDOS</h3>     
+            
+            <p>¿Necesitás una compu?<br>Entonces pedila acá.</p>
+ 
+            <form action="https://airform.io/cybercirujas.zo@protonmail.com" method="post">
+                <fieldset>
+                    <label for="Donante">Persona o Institución Solicitante. <i>*obligatorio</i> </label>
+                <input type="text" name="Donante" size="40" required placeholder="Ingresá tu Nombre o el de la Institución.">
+                <br>
+                <label for="Apellido">Apellido</label>
+                <input type="text" name="Apellido" id="Apellido" placeholder="Ingresá tu Apellido">
+                <br>
+                <label for="Teléfono">Teléfono <i>*obligatorio</i></label>
+                <input type="number" name="Teléfono" id="Teléfono" required placeholder="Ingresá solo números">
+                <br>
+                <label for="Email">E-mail</label>
+                <input type="email" name="Email" id="Email" placeholder="Ingresá tu E-mail">
+                <br>
+                <textarea name="Mensaje" id="Mensaje" cols="80" rows="6" spellcheck="true" placeholder="Contanos el uso que le vas a dar a la compu..."></textarea>
+                <br>
+                <button type="submit">Enviar</button>
+                <button type="reset">Borrar</button>
+                </fieldset>
+            </form>
         </section>
     </main>
 
     <footer>
-        <div class="centrado" id="IG">
-            <img src="img/LogoIGRedondo.png" alt="Logo de Instagram" width="5%">
+        <section class="centrado" id="IG">
             <a href="https://www.instagram.com/cybercirujas.zo" target="_blank"
-                rel="noopener noreferrer">www.instagram.com/cybercirujas.zo</a>
-        </div>
+                rel="noopener noreferrer"><img src="img/LogoIGRedondo.png" alt="Logo de Instagram" width="5%"></a>
+        </section>
 
-        <div class="centrado">
-            <p>2024</p>
-        </div>
+        <section class="centrado">
+            <p> <a href="https://uctumi.com/index.php?option=com_content&view=article&id=202:demo-libertongo-de-pvm&catid=9&lang=es&Itemid=118" target="_blank" rel="noopener noreferrer">"Libertongo"</a> por <a href="http://uctumi.com" target="_blank" rel="noopener noreferrer">Uctumi</a></p>
+            <audio src="music/PVM - Libertongo (C64 one-file demo).mp3" autoplay loop controls></audio> <!--Cuando veamos JS tengo que hacer que se reproduzca la música al interactuar con ella-->
+        </section>
 
-        <div id="creditos">
+        <section>
+            <p class="centrado">©2024 CyberCirujas Zona Oeste</p>
+        </section>
+
+        <section id="creditos">
             <p>Diseño Web: Nickelaoz</p>
-        </div>
+            <p>Música: <a href="http://uctumi.com" target="_blank" rel="noopener noreferrer">Uctumi</a></p>
+        </section>
     </footer>
 </body>
 </html>
