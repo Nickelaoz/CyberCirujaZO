@@ -125,6 +125,7 @@ button {
 
 footer {
     margin-top: 30px;
+    display: grid;
 }
 
 .centrado {
