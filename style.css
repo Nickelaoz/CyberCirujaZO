@@ -24,6 +24,10 @@ header section {
 header p {
     margin-top: 0;
     font-size: 3.5em;
+    width: 100%; /* Ocupa el ancho completo del contenedor div */
+    max-width: 600px; /* Tamaño máximo para pantallas grandes */
+    height: auto; /* Mantiene la proporción de la imagen */
+    text-align: center;
 }
 
 nav {
@@ -243,9 +247,8 @@ footer {
         font-size: 1.5em; /* Disminuye el tamaño de la fuente en dispositivos móviles */
     }
 
-        /* En pantallas más pequeñas, reduce el tamaño de las imágenes laterales */
     .encabezado img {
-        width: 10%;
+        width: 20%;
         max-width: 60px;
     }
 
