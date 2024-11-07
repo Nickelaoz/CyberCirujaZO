@@ -17,10 +17,6 @@ header {
     padding: 1rem;
 }
 
-header section {
-    margin-bottom: 0;
-}
-
 header p {
     margin-top: 0;
     font-size: 3.5em;
@@ -126,6 +122,24 @@ button {
 footer {
     margin-top: 30px;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 20px; 
+    padding: 20px;
+}
+
+footer .columna {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .columna.central {
+    text-align: center;
+}
+
+footer .columna.derecha {
+    text-align: right;
 }
 
 .centrado {
@@ -212,12 +226,17 @@ footer {
 }
 
 #IG{
-    width: 80%;
     text-align: center;
 }
 
-#creditos {
-    text-align: right;
+#IG img {
+    width: 70px;
+}
+
+#creditos ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 #pestañaActual {
@@ -232,16 +251,21 @@ footer {
     }
 
     header h2 {
-        font-size: 2em; /* Ajusta el tamaño del texto para pantallas más pequeñas */
+        font-size: 2em; 
+    }
+
+    footer {
+        grid-template-columns: 1fr; 
+        text-align: center;
     }
 
     .img-central, .encabezado p {
         max-width: 100%; /* Asegura que ambos elementos se ajusten a pantallas pequeñas */
+        text-align: center;
     }
 
     .img-lateral {
-        width: 8%;
-        max-width: 60px;
+        display: none;
     }
 
     .menú {
@@ -258,4 +282,7 @@ footer {
         padding-top: 56.25%; /* Aspect ratio 16:9 */
     }
 
+    .columna {
+        align-items: center;
+    }
 }
