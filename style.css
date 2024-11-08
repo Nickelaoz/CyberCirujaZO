@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'RetroLandMayhem';
-    src: url('fonts/retro-land-mayhem.ttf') format('truetype');
+    src: url('fonts/retro-land-mayhem.ttf') format('truetype'); /* Fuente importada local */
     font-weight: normal;
     font-style: normal;
 }
@@ -13,7 +13,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 1rem; /* Espacio entre las imágenes */
+    gap: 1rem;
     padding: 1rem;
 }
 
@@ -24,6 +24,11 @@ header p {
     max-width: 600px; /* Tamaño máximo para pantallas grandes */
     height: auto; /* Mantiene la proporción de la imagen */
     text-align: center;
+}
+
+/* Imagenes Header*/
+.img-central, .img-lateral {
+    height: auto;
 }
 
 nav {
@@ -44,7 +49,7 @@ nav ul li {
 }
 
 nav ul li:hover {
-    text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+    text-decoration: underline;
 }
 
 nav ul li:last-child {
@@ -83,7 +88,6 @@ section {
     margin-bottom: 50px; /* Espacio entre secciones */
 }
 
-/* Estilos para mejorar la legibilidad del párrafo */
 main section p {
     margin-top: 10px; /* Reduce el espacio superior para acercar el párrafo al video */
     font-size: 2em; 
@@ -94,16 +98,14 @@ main section p {
     text-align: justify; 
 }
 
-/* Estilo del enlace para hacerlo más visible */
-section p a {
-    color: #007acc; /* Color azul para destacar el enlace */
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    font-weight: bold; /* Hace que el enlace sea más prominente */
+section p a, footer a{
+    color: #007acc; 
+    text-decoration: none; 
+    font-weight: bold; 
 }
 
-/* Añadir un subrayado al pasar el cursor sobre el enlace */
 section p a:hover {
-    text-decoration: underline; /* Muestra un subrayado cuando el usuario pasa el ratón */
+    text-decoration: underline; 
 }
 
 form {
@@ -114,15 +116,15 @@ form {
 
 button {
     width: auto; /* Deja que los botones se ajusten automáticamente a su contenido */
-    margin-right: 10px; /* Espacio entre botones */
+    margin-right: 10px; 
     padding: 10px 20px;
-    cursor: pointer; /* Cambia el cursor para indicar interactividad */
+    cursor: pointer; 
 }
 
 footer {
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 2fr 1fr; 
     gap: 20px; 
     padding: 20px;
 }
@@ -158,7 +160,7 @@ footer .columna.derecha {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%; /* Ocupa el 50% del espacio disponible */
+    width: 50%; 
     text-align: center;
 }
 
@@ -178,7 +180,6 @@ footer .columna.derecha {
     margin: 0; /* Elimina márgenes para un mejor centrado */
 }
 
-/* Texto con ancho igual al de la imagen central */
 .encabezado p {
     font-size: 3.5em;
     width: 100%; /* Ocupa el mismo ancho que la imagen central */
@@ -208,20 +209,19 @@ footer .columna.derecha {
     font-family: 'RetroLandMayhem';
 }
 
-/* Estilos para centrar el video y ajustar la proporción vertical (4:5) */
 .video-container {
     width: 20%; /* Ajusta el ancho del contenedor */
     margin: 0 auto; /* Centra el contenedor del video */
     position: relative;
-    padding-top: 35%; /* Relación de aspecto 4:5 (altura más grande que el ancho pero no tan extrema) */
+    padding-top: 35%; 
 }
 
 .video-container iframe {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* El iframe ocupa todo el ancho del contenedor */
-    height: 100%; /* El iframe ocupa toda la altura del contenedor */
+    width: 100%;
+    height: 100%; 
     margin-bottom: 10px;
 }
 
@@ -243,8 +243,7 @@ footer .columna.derecha {
     background-color: rgb(195, 195, 195);
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
     nav ul li {
         display: block;
         margin-bottom: 10px;
@@ -256,10 +255,10 @@ footer .columna.derecha {
 
     footer {
         grid-template-columns: 1fr; 
-        text-align: center;
     }
 
-    .img-central, .encabezado p {
+    
+    .video-container, .img-central, .encabezado p {
         max-width: 100%; /* Asegura que ambos elementos se ajusten a pantallas pequeñas */
         text-align: center;
     }
@@ -269,12 +268,12 @@ footer .columna.derecha {
     }
 
     .menú {
-        font-size: 1.5em; /* Disminuye el tamaño de la fuente en dispositivos móviles */
+        font-size: 1.5em; 
     }
 
     .encabezado img {
-        width: 20%;
-        max-width: 60px;
+        width: 100%;
+        max-width: auto;
     }
 
     .video-container {
