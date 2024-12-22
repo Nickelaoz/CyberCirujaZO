@@ -121,12 +121,28 @@ button {
     cursor: pointer; 
 }
 
+body {
+    min-height: 100vh;  /* Asegura que el body ocupe todo el alto de la ventana */
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+main {
+    flex: 1;  /* Hace que el main ocupe todo el espacio disponible */
+}
+
 footer {
-    margin-top: 30px;
+    margin-top: auto;  /* Esto empujará el footer hacia abajo */
+    margin-bottom: 0;  /* Elimina cualquier margen inferior */
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr; 
-    gap: 20px; 
-    padding: 20px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 20px;
+    padding: 10px 20px
+}
+
+footer p,footer section {
+    margin-bottom: 0;
 }
 
 footer .columna {
@@ -135,7 +151,9 @@ footer .columna {
     justify-content: center;
     align-items: center;
 }
-
+footer .columna.izquierda {
+    margin-bottom: 0;
+}
 footer .columna.central {
     text-align: center;
 }
@@ -233,10 +251,66 @@ footer .columna.derecha {
     width: 70px;
 }
 
+#creditos {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: 0.5rem;
+    align-items: start;
+    padding-top: 2rem;  
+    padding-left: 3rem;  
+    margin-bottom: 0;
+}
+
+#creditos p {
+    margin-bottom: 0;
+}
+
+/* Alineación vertical para la primera fila */
+#creditos p:first-child,
+#creditos p:nth-child(2) {
+    align-self: end;  /* Alinea los elementos de la primera fila hacia abajo */
+}
+
 #creditos ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    grid-column: 2;
+    text-align: left;
+    grid-row: 2;
+}
+
+#creditos ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Alineación horizontal para la primera columna (labels) */
+#creditos p:first-child,
+#creditos p:nth-child(3) {
+    grid-column: 1;
+    margin: 0;
+    text-align: right;
+}
+
+/* Alineación horizontal para la segunda columna (nombres) */
+#creditos p:nth-child(2) {
+    grid-column: 2;
+    margin: 0;
+    text-align: left;
+}
+
+/* Posicionamiento específico de cada elemento */
+#creditos p:first-child {
+    grid-row: 1;
+}
+
+#creditos p:nth-child(2) {
+    grid-row: 1;
+}
+
+#creditos p:nth-child(3) {
+    grid-row: 2;
 }
 
 #pestañaActual {
@@ -283,5 +357,10 @@ footer .columna.derecha {
 
     .columna {
         align-items: center;
+    }
+
+    #creditos {
+        padding-top: 1rem;
+        padding-left: 1rem;
     }
 }
